@@ -1,1 +1,22 @@
-<p>blog-post-list works!</p>
+<div class="allPosts">
+  <div class="container">
+    @if (getPosts.length > 0 ) {
+    <div class="row">
+      @for (post of getPosts; track $index) {
+				<div class="col-md-4">
+				<app-blog-post-item [post]="post"></app-blog-post-item>
+			</div>
+      }
+    </div>
+    } @else {
+      <h1
+        class="text-center text-white py-2 d-flex align-items-center justify-content-center"
+      >
+        <i class="fa-solid fa-spinner fa-spin fa-2xl"></i>
+      </h1>
+    }
+		@if (res.length > getPosts.length) {
+			<button class="btn btn-success" (click)="getArticals()">Load more</button>
+		}
+  </div>
+</div>

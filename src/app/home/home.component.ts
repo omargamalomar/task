@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { BlogPostListComponent } from '../blog-post-list/blog-post-list.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [BlogPostListComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
