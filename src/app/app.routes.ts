@@ -5,9 +5,9 @@ import { BlogPostListComponent } from './blog-post-list/blog-post-list.component
 import { ErrorMessageComponent } from './error-message/error-message.component';
 
 export const routes: Routes = [
-    {path:"" , redirectTo:"home", pathMatch:"full"},
-    {path:"home",component:HomeComponent},
-    {path:"blog-item",component:BlogPostItemComponent},
-    {path:"blog-list",component:BlogPostListComponent},
-    {path:"**",component:ErrorMessageComponent},
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'blog-item', component: BlogPostItemComponent },
+  { path: 'blog-list', component: BlogPostListComponent },
+  { path: '**', component: ErrorMessageComponent },
 ];

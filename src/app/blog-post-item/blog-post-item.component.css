@@ -37,17 +37,17 @@
   height: 40px;
   bottom: 40px;
 }
-.card-post .profile img{
+.card-post .profile img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
 }
-.card-post .profile .text-profile p{
+.card-post .profile .text-profile p {
   font-size: 12px;
   font-weight: 400;
   margin: 0;
   padding-left: 15px;
 }
-.card-post .profile .text-profile p:last-child{
-color: #667085;
+.card-post .profile .text-profile p:last-child {
+  color: #667085;
 }
