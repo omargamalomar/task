@@ -9,21 +9,23 @@
     @if (getPosts.length > 0 ) {
     <div class="row mt-5">
       @for (post of getPosts |search:term; track $index ) {
-      <div tabindex="0"  class="col-lg-4 col-md-6 col-sm-12">
+      <div tabindex="0" class="col-lg-4 col-md-6 col-sm-12">
         <app-blog-post-item [post]="post"></app-blog-post-item>
       </div>
       }
     </div>
-    } @else {
+    @if (res.length > getPosts.length ) {
+    <button class="btn d-block mx-auto mt-4 mb-4" (click)="loadMore()">
+      <i class="fa-solid fa-arrow-down me-2"></i> Load more
+    </button>
+    } } @else if (loading) {
     <h1
       class="mt-5 pt-5 pb-5 mb-5 text-center py-2 d-flex align-items-center justify-content-center"
     >
       <i class="fa-solid fa-spinner fa-spin"></i>
     </h1>
-    } @if (res.length > getPosts.length) {
-    <button class="btn d-block mx-auto mt-4 mb-4" (click)="getArticals()">
-      <i class="fa-solid fa-arrow-down me-2"></i> Load more
-    </button>
+    } @else {
+    <h1 class="text-center mt-5">No Posts Yet</h1>
     }
   </div>
 </div>
