@@ -1,9 +1,20 @@
+
+.big-item{
+  border: none;
+  outline: none;
+  color: #000;
+}
 .card-post {
   /* width: 370px; */
   margin-top: 20px;
   height: 580px;
   padding: 24px 24px 32px 24px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: .3s;
+}
+.card-post:hover{
+  transform: translateY(-20px);
+  background-color: #eaeaea9a;
 }
 .card-post .social-image {
   width: 100%;
