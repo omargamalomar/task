@@ -1,22 +1,29 @@
 <div class="allPosts">
   <div class="container">
+    <div class="search d-flex justify-content-center align-items-center">
+      <div class="search-content">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input [(ngModel)]="term" type="text" placeholder="search" />
+      </div>
+    </div>
     @if (getPosts.length > 0 ) {
-    <div class="row">
-      @for (post of getPosts; track $index) {
-				<div class="col-md-4">
-				<app-blog-post-item [post]="post"></app-blog-post-item>
-			</div>
+    <div class="row mt-5">
+      @for (post of getPosts |search:term; track $index ) {
+      <div tabindex="0"  class="col-lg-4 col-md-6 col-sm-12">
+        <app-blog-post-item [post]="post"></app-blog-post-item>
+      </div>
       }
     </div>
     } @else {
-      <h1
-        class="text-center text-white py-2 d-flex align-items-center justify-content-center"
-      >
-        <i class="fa-solid fa-spinner fa-spin fa-2xl"></i>
-      </h1>
+    <h1
+      class="mt-5 pt-5 pb-5 mb-5 text-center py-2 d-flex align-items-center justify-content-center"
+    >
+      <i class="fa-solid fa-spinner fa-spin"></i>
+    </h1>
+    } @if (res.length > getPosts.length) {
+    <button class="btn d-block mx-auto mt-4 mb-4" (click)="getArticals()">
+      <i class="fa-solid fa-arrow-down me-2"></i> Load more
+    </button>
     }
-		@if (res.length > getPosts.length) {
-			<button class="btn btn-success" (click)="getArticals()">Load more</button>
-		}
   </div>
 </div>

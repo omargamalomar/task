@@ -1,4 +1,17 @@
-
-<div class="card-post">
-	<img class="social-image" [src]="post.social_image" alt="" />
+<div class="card-post position-relative">
+  <img class="social-image" [src]="post.social_image" alt="" />
+  <div class="text-content">
+    <span class="mb-2">{{ post.type_of }}</span>
+    <h4 class="position-relative mb-3">
+      {{ post.title }} <i class="fa-solid fa-arrow-up position-absolute"></i>
+    </h4>
+    <p>{{ post.description }}</p>
+  </div>
+	<div class="profile d-flex position-absolute">
+		<img [src]="post.user.profile_image_90" alt="">
+		<div class="text-profile">
+			<p class="text-capitalize">{{post.user.username}}</p>
+			<p>{{post.created_at | date }}</p>
+		</div>
+	</div>
 </div>

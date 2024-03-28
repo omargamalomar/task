@@ -1,10 +1,53 @@
 .card-post {
-    width: 384px;
-    padding: 24px 24px 32px 24px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  }
-  .card-post .social-image {
-    width: 336px;
-    height: 240px;
-  }
-  
+  /* width: 370px; */
+  margin-top: 20px;
+  height: 580px;
+  padding: 24px 24px 32px 24px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.card-post .social-image {
+  width: 100%;
+  height: 230px;
+}
+.text-content span {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6941c6;
+  margin-top: 20px;
+}
+.text-content h4 {
+  font-size: 20px;
+  font-weight: 600;
+  padding-right: 20px;
+}
+.text-content h4 i {
+  right: 0;
+  top: 0;
+  transform: rotate(50deg);
+  font-size: 16px;
+}
+.text-content p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #667085;
+}
+.card-post .profile {
+  width: 135px;
+  height: 40px;
+  bottom: 40px;
+}
+.card-post .profile img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.card-post .profile .text-profile p{
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+  padding-left: 15px;
+}
+.card-post .profile .text-profile p:last-child{
+color: #667085;
+}
